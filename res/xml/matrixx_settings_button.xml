@@ -21,5 +21,9 @@
     android:title="@string/button_options_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <com.matrixx.settings.preferences.SystemSettingSwitchPreference
+        android:key="hardware_keys_disable"
+        android:title="@string/hwkeys_disabled_title"
+        android:summary="@string/hwkeys_disabled_summary" />
 
 </PreferenceScreen>
