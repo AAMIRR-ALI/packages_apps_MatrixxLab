@@ -77,7 +77,7 @@ public class LabSettings extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.AOSPA;
+        return MetricsProto.MetricsEvent.HAVOC_SETTINGS;
     }
 
     public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
