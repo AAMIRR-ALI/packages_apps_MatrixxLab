@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2023 The LeafOS Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tenx="http://schemas.android.com/apk/res-auto"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:key="ui_options"
+    android:title="@string/ui_options_title">
+
+    <PreferenceCategory
+          android:title="Fonts and Interface">
+
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="lockscreen_highlight_dashboard"
+        android:layout="@layout/lockscreen_highlight_dashboard"
+        android:selectable="false"/>
+
+          <!-- Font style -->
+        <com.tenx.support.preferences.TenXPreference
+            android:key="android.theme.customization.fonts"
+            tenx:position="top"
+            android:title="@string/theme_customization_font_title"
+            android:summary="@string/theme_customization_font_summary"
+            android:fragment="com.android.settings.fragments.fonts.FontPickerPreview"/>
+
+        <!-- Icon pack -->
+        <com.tenx.support.preferences.TenXPreference
+            android:key="android.theme.customization.icon_pack"
+            tenx:position="middle"
+            android:title="@string/theme_customization_icon_pack_title"
+            android:summary="@string/theme_customization_icon_pack_summary"
+            android:fragment="com.android.settings.fragments.StatusbarIcons"/>
+
+        <!-- Navbar Style -->
+        <com.tenx.support.preferences.TenXPreference
+            android:key="android.theme.customization.navbar"
+            tenx:position="middle"
+            android:title="@string/theme_customization_navbar_title"
+            android:summary="@string/theme_customization_navbar_summary"
+            android:fragment="com.android.settings.fragments.NavbarStyles"/>
+
+	    <!-- Progressbar styles -->
+        <com.tenx.support.preferences.TenXPreference
+            android:key="android.theme.customization.progress_bar"
+            tenx:position="middle"
+            android:title="@string/theme_customization_progressbar_title"
+            android:summary="@string/theme_customization_progressbar_summary"
+            android:fragment="com.android.settings.fragments.ProgressbarStyles"/>
+
+        <!-- Adaptive icon pack -->
+        <com.tenx.support.preferences.TenXPreference
+            android:key="android.theme.customization.adaptive_icon_shape"
+            tenx:position="middle"
+            android:title="@string/theme_customization_icon_shape_title"
+            android:summary="@string/theme_customization_icon_shape_summary"
+            android:fragment="com.android.settings.fragments.IconShapes"/>
+
+        <!-- Signal icon style -->
+        <com.tenx.support.preferences.TenXPreference
+            android:key="android.theme.customization.signal_icon"
+            tenx:position="middle"
+            android:title="@string/theme_customization_signal_icon_title"
+            android:summary="@string/theme_customization_signal_icon_summary"
+            android:fragment="com.android.settings.fragments.SignalIcons"/>
+
+        <!-- Data icon style -->  
+        <com.tenx.support.preferences.TenXPreference
+            android:key="android.customization.sb_data"
+            tenx:position="middle"
+            android:title="@string/theme_customization_data_title"
+            android:summary="@string/theme_customization_data_summary"
+            android:fragment="com.android.settings.fragments.DataStyles"/>
+
+        <!-- Wifi icon style -->
+        <com.tenx.support.preferences.TenXPreference
+            android:key="android.theme.customization.wifi_icon"
+            tenx:position="middle"
+            android:title="@string/theme_customization_wifi_icon_title"
+            android:summary="@string/theme_customization_wifi_icon_summary"
+            android:fragment="com.android.settings.fragments.WifiIcons"/>
+
+        <com.tenx.support.preferences.TenXPreference
+            android:key="sbbatteryicons"
+            tenx:position="middle"
+            android:title="@string/battery_style_title"
+            android:summary="@string/status_bar_battery_style_summary"
+            android:fragment="com.android.settings.fragments.BatteryStyleSettings" />
+
+        <!-- System animation styles -->
+        <com.tenx.support.preferences.SystemSettingListPreference
+            android:key="system_animation_style"
+            tenx:position="bottom"
+            android:title="@string/system_animation_style_title"
+            android:dialogTitle="@string/system_animation_style_title"
+            android:entries="@array/system_animation_styles_entries"
+            android:entryValues="@array/system_animation_styles_values"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Wallpaper Changes">
+
+        <com.tenx.support.preferences.TenXPreference
+            android:key="depth_wallpaper"
+            tenx:position="top"
+            android:title="@string/dw_wallpaper_enabled_title"
+            android:summary="@string/dw_wallpaper_enabled_summary"
+            android:fragment="com.android.settings.fragments.WallpaperDepth"/>
+
+        <!-- Wallpaper Settings -->
+        <com.tenx.support.preferences.TenXPreference
+            android:key="wallpaper_settings"
+            android:title="@string/wallpaper_settings_title"
+            android:summary="@string/wallpaper_settings_summary"
+            android:fragment="com.android.settings.fragments.Wallpaper"
+            tenx:position="bottom"/>
+        
+    </PreferenceCategory>
+
+    <PreferenceCategory
+	android:title="Clock face changes">
+
+        <com.tenx.support.preferences.SecureSettingSwitchPreference
+            android:key="clock_text_accent_color"
+            android:title="Use accent color for clock"
+            android:summary="Use system accent color instead of white for clock text"
+            android:defaultValue="false"
+            tenx:position="top" />
+
+        <com.tenx.support.preferences.SecureSettingSeekBarPreference
+            android:key="clock_text_opacity"
+            android:title="Clock text opacity"
+            android:summary="Adjust the transparency of the clock text"
+            android:defaultValue="100"
+            android:max="100"
+            tenx:position="bottom"
+            settings:min="10"
+	    settings:units="%" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Lockscreen">
+
+        <!-- Pulse music visualizer -->
+        <com.tenx.support.preferences.TenXPreference
+            android:key="pulse_settings"
+            tenx:position="top"
+            android:title="@string/pulse_settings"
+            android:summary="@string/pulse_settings_summary"
+            android:fragment="com.android.settings.fragments.PulseSettings" />
+
+        <!-- Screen Off animation -->
+        <com.tenx.support.preferences.SystemSettingListPreference
+            android:key="screen_off_animation"
+            tenx:position="middle"
+            android:title="@string/screen_off_animation_title"
+            android:dialogTitle="@string/screen_off_animation_title"
+            android:entries="@array/screen_off_animation_entries"
+            android:entryValues="@array/screen_off_animation_values"
+            android:defaultValue="0" />
+
+        <com.tenx.support.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_enable_power_menu"
+            tenx:position="middle"
+            android:title="@string/lockscreen_enable_power_menu_title"
+            android:summary="@string/lockscreen_enable_power_menu_summary"
+            android:defaultValue="true" />
+
+        <com.tenx.support.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_battery_info"
+            tenx:position="middle"
+            android:title="@string/lockscreen_battery_info_title"
+            android:summary="@string/lockscreen_battery_info_summary"
+            android:defaultValue="true" />
+
+        <!-- Charging animation -->
+        <com.tenx.support.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_charging_animation"
+            tenx:position="middle"
+            android:title="@string/keyguard_charging_animation_title"
+            android:summary="@string/keyguard_charging_animation_summary"
+            android:defaultValue="true" />
+
+        <com.tenx.support.preferences.SystemSettingSwitchPreference
+            android:key="charging_animation"
+            tenx:position="middle"
+            android:title="@string/charging_animation_title"
+            android:summary="@string/charging_animation_summary"
+            android:defaultValue="true" />
+
+        <com.tenx.support.preferences.SystemSettingSwitchPreference
+            android:key="wireless_charging_animation"
+            tenx:position="middle"
+            android:title="@string/wireless_charging_animation_title"
+            android:summary="@string/wireless_charging_animation_summary"
+            android:defaultValue="true" />
+
+        <com.tenx.support.preferences.SystemSettingSwitchPreference
+            android:key="screen_animation_enabled"
+            tenx:position="middle"
+            android:title="@string/screen_animation_title"
+            android:summary="@string/screen_animation_summary"
+            android:defaultValue="false" />
+
+        <com.tenx.support.preferences.SystemSettingSwitchPreference
+            android:key="enable_dot_ripple_unlock"
+            android:title="@string/enable_dot_ripple_effect_title"
+            android:summary="@string/enable_dot_ripple_effect_summary"
+            android:defaultValue="false"
+            tenx:position="middle" />
+
+        <!-- Ripple effect on unlocking -->
+        <com.tenx.support.preferences.SystemSettingSwitchPreference
+            android:key="enable_ripple_effect"
+            tenx:position="middle"
+            android:title="@string/enable_fingerprint_ripple_effect_title"
+            android:summary="@string/enable_fingerprint_ripple_effect_summary"
+            android:defaultValue="true" />
+
+	    <!-- Keyguard user switcher -->
+	    <com.tenx.support.preferences.SystemSettingSwitchPreference
+	        android:key="kg_user_switcher_enabled"
+	        tenx:position="middle"
+            android:title="@string/kg_user_switcher_enabled_title"
+            android:summary="@string/kg_user_switcher_enabled_summary"
+            android:defaultValue="false" />
+
+        <com.tenx.support.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_show_carrier"
+            tenx:position="bottom"
+            android:title="@string/lockscreen_show_carrier_title"
+            android:summary="@string/lockscreen_show_carrier_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Lockscreen media">
+
+        <com.tenx.support.preferences.SystemSettingSwitchPreference
+            android:key="keyguard_now_bar_enabled"
+            android:title="@string/keyguard_now_bar_enabled_title"
+            android:summary="@string/keyguard_now_bar_enabled_summary"
+            android:defaultValue="false"
+            tenx:position="top" />
+
+        <com.tenx.support.preferences.SystemSettingSeekBarPreference
+    	    android:key="nowbar_margin_bottom"
+    	    android:title="@string/keyguard_now_bar_margin_title"
+            android:summary="@string/keyguard_now_bar_margin_summary"
+    	    android:defaultValue="18"
+            settings:interval="5"
+    	    android:min="10"
+    	    android:max="200"
+            tenx:position="middle" />
+
+        <com.tenx.support.preferences.SystemSettingSwitchPreference
+            android:key="ls_media_art_enabled"
+            tenx:position="middle"
+            android:title="@string/media_art_title"
+            android:summary="@string/media_art_summary"
+            android:defaultValue="false" />
+
+        <com.tenx.support.preferences.SystemSettingListPreference
+            android:key="ls_media_art_filter"
+            tenx:position="middle"
+            android:title="@string/lockscreen_albumart_filter_title"
+            android:entries="@array/lockscreen_albumart_filter_entries"
+            android:entryValues="@array/lockscreen_albumart_filter_values"
+            android:dependency="ls_media_art_enabled"
+            android:defaultValue="0" />
+
+        <com.tenx.support.preferences.SystemSettingSeekBarPreference
+            android:key="ls_media_art_fade_level"
+            tenx:position="middle"
+            android:title="@string/ls_media_art_fade_level_title"
+            android:summary="@string/ls_media_art_fade_level_summary"
+            android:defaultValue="40"
+            settings:interval="1"
+            settings:units="%"
+            android:max="100"
+            android:min="0"
+            android:dependency="ls_media_art_enabled" />
+
+        <com.tenx.support.preferences.SystemSettingSeekBarPreference
+            android:key="ls_media_art_blur_level"
+            tenx:position="bottom"
+            android:title="@string/ls_media_art_blur_level_title"
+            android:summary="@string/ls_media_art_blur_level_summary"
+            android:defaultValue="200"
+            android:max="600"
+            android:min="0"
+            settings:interval="1"
+            android:dependency="ls_media_art_enabled" />
+     
+     </PreferenceCategory>
+
+     <PreferenceCategory
+        android:title="UDFPS Customization">
+
+        <com.tenx.support.preferences.TenXPreference
+	    android:key="udfps_icon_picker"
+	    tenx:position="top"
+            android:title="@string/udfps_icon_picker_title"
+            android:summary="@string/udfps_icon_picker_summary"
+            android:fragment="com.android.settings.fragments.UdfpsIconPicker" />
+
+        <com.tenx.support.preferences.TenXPreference
+	    android:key="udfps_recognizing_animation_preview"
+	    tenx:position="bottom"
+            android:title="@string/udfps_recog_animation_effect_title"
+            android:summary="@string/udfps_recog_animation_effect_summary"
+            android:fragment="com.android.settings.fragments.UdfpsAnimation" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="toast_animations_category"
+	    android:title="@string/toast_category_title">
+
+	<com.tenx.support.preferences.SystemSettingListPreference
+	        android:key="toast_animation"
+	        tenx:position="full"
+            android:title="@string/toast_animation_title"
+            android:dialogTitle="@string/toast_animation_title"
+            android:entries="@array/toast_animation_entries"
+            android:entryValues="@array/toast_animation_values"
+            android:summary="%s"
+	        android:defaultValue="1" />
+
+    </PreferenceCategory>
+
+     <PreferenceCategory
+          android:title="OmniJaw Weather">
+
+        <com.tenx.support.preferences.TenXPreference
+            android:title="@string/weather_menu_title"
+            tenx:position="top"
+            android:summary="@string/weather_menu_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="org.omnirom.omnijaws"
+                android:targetClass="org.omnirom.omnijaws.WeatherActivity" />
+        </com.tenx.support.preferences.TenXPreference>
+
+        <com.tenx.support.preferences.TenXPreference
+            android:title="@string/weather_settings_title"
+            tenx:position="middle"
+            android:summary="@string/weather_settings_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="org.omnirom.omnijaws"
+                android:targetClass="org.omnirom.omnijaws.SettingsActivity" />
+        </com.tenx.support.preferences.TenXPreference>
+
+        <com.tenx.support.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_weather_enabled"
+            tenx:position="middle"
+            android:title="@string/lockscreen_weather_title"
+            android:summary="@string/lockscreen_weather_summary" />
+
+        <com.tenx.support.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_weather_location"
+            tenx:position="middle"
+            android:title="@string/lockscreen_weather_location_title"
+            android:summary="@string/lockscreen_weather_location_summary"
+            android:dependency="lockscreen_weather_enabled" />
+
+        <com.tenx.support.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_weather_text"
+            tenx:position="bottom"
+            android:title="@string/lockscreen_weather_text_title"
+            android:summary="@string/lockscreen_weather_text_summary"
+            android:defaultValue="true"
+            android:dependency="lockscreen_weather_enabled" />
+    
+    </PreferenceCategory>
+    
+</PreferenceScreen>

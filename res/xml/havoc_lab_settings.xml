@@ -1,0 +1,61 @@
+<!--
+  Copyright (C) 2023 HavocOS-Extended
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:title="@string/havoc_lab_title">
+
+      <Preference
+        android:key="user_interface_category"
+        android:title="@string/ui_options_title"
+        android:summary="User Interface releted customizations"
+        android:fragment="com.havoc.settings.laboratory.UserInterface"
+        android:icon="@drawable/ic_themes" />
+
+      <Preference
+        android:key="statusbar_category"
+        android:title="@string/statusbar_options_title"
+        android:summary="Statusbar releted stuff"
+        android:fragment="com.havoc.settings.laboratory.Statusbar"
+        android:icon="@drawable/ic_themes" />
+
+      <Preference
+        android:key="system_category"
+        android:title="@string/system_options_title"
+        android:summary="System Settings releted stuff"
+        android:fragment="com.havoc.settings.laboratory.System"
+        android:icon="@drawable/ic_themes" />
+
+      <Preference
+        android:key="bottom_category"
+        android:title="@string/bottom_options_title"
+        android:summary="Bottom releted stuff"
+        android:fragment="com.havoc.settings.laboratory.Bottoms"
+        android:icon="@drawable/ic_themes" />
+
+      <Preference
+        android:key="spoofing_category"
+        android:title="@string/spoofing_options_title"
+        android:summary="Spoof and pixelprops releted stuff"
+        android:fragment="com.havoc.settings.laboratory.Spoofing"
+        android:icon="@drawable/ic_themes" />
+    
+    <com.android.settingslib.widget.FooterPreference
+        android:title="@string/havoc_lab_footer"
+        android:selectable="false"
+        settings:searchable="false"/>
+</PreferenceScreen>

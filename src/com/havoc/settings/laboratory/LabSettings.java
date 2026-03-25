@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 package com.havoc.settings.laboratory;
 
 import android.app.Activity;
@@ -78,7 +77,7 @@ public class LabSettings extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.HAVOC_SETTINGS;
+        return MetricsProto.MetricsEvent.AOSPA;
     }
 
     public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
