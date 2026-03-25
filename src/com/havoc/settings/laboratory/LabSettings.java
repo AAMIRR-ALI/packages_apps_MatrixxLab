@@ -17,14 +17,18 @@
 package com.havoc.settings.laboratory;
 
 import android.app.Activity;
+import android.app.settings.SettingsEnums;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Resources;
+import android.content.Intent;
+import android.content.pm.UserInfo;
 import android.os.Bundle;
-import android.os.UserHandle;
+import android.os.UserManager;
+import android.view.View;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.text.TextUtils;
@@ -33,10 +37,18 @@ import androidx.preference.*;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
+import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settingslib.search.Indexable;
+import com.android.settings.widget.EntityHeaderController;
+import com.android.settingslib.core.AbstractPreferenceController;
+import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
+import com.android.settingslib.widget.LayoutPreference;
+
+import com.android.settings.ui.personalizationSettingsController;
+import com.android.settings.SettingsPreferenceFragment;
+import com.android.settingslib.search.Indexable;
 
 import java.time.format.DateTimeFormatter;
 import java.time.LocalTime;
@@ -45,34 +57,16 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
-@SearchIndexable
-public class LabSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener, Indexable {
+public class LabSettings extends DashboardFragment {
 
-    @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
-        ContentResolver resolver = getActivity().getContentResolver();
-        addPreferencesFromResource(R.xml.havoc_lab_settings);
-
-        final Resources res = getResources();
-    }
+        private static final String LOG_TAG = "LabSettings";
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
-        return false;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
+    protected int getPreferenceScreenResId() {
+        return R.xml.havoc_lab_settings;
     }
 
     @Override
@@ -80,24 +74,43 @@ public class LabSettings extends SettingsPreferenceFragment implements
         return MetricsProto.MetricsEvent.HAVOC_SETTINGS;
     }
 
-    public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider() {
-                @Override
-                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                                                                            boolean enabled) {
-                    ArrayList<SearchIndexableResource> result =
-                            new ArrayList<SearchIndexableResource>();
+    @Override
+    public int getHelpResource() {
+        return R.string.help_uri_about;
+    }
+    
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
+    
+    @Override
+    protected String getLogTag() {
+        return LOG_TAG;
+    }
+    
+    @Override
+    protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
+        return buildPreferenceControllers(context, this /* fragment */, getSettingsLifecycle());
+    }
+    
+    private static List<AbstractPreferenceController> buildPreferenceControllers(
+            Context context, LabSettings fragment, Lifecycle lifecycle) {
+        final List<AbstractPreferenceController> controllers = new ArrayList<>();
+        controllers.add(new personalizationSettingsController(context));
+        return controllers;
+    }
 
-                    SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.havoc_lab_settings;
-                    result.add(sir);
-                    return result;
-                }
-
+    /**
+     * For Search.
+     */
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.havoc_lab_settings) {
                 @Override
-                public List<String> getNonIndexableKeys(Context context) {
-                    List<String> keys = super.getNonIndexableKeys(context);
-                    return keys;
+                public List<AbstractPreferenceController> createPreferenceControllers(
+                        Context context) {
+                    return buildPreferenceControllers(context, null /* fragment */,
+                            null /* lifecycle */);
                 }
             };
-}
+ } 
