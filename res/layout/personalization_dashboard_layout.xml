@@ -358,7 +358,9 @@
     android:id="@+id/colors_font"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:background="@drawable/afl_buttons_interface">
+
     <RelativeLayout
         android:id="@+id/bottom_options"
         android:layout_width="0dp"
