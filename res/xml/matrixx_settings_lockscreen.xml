@@ -21,6 +21,18 @@
     android:title="@string/lockscreen_options_title">
 
     <PreferenceCategory
+        android:key="lockscreen_clock_category"
+        android:title="@string/qs_clock_title">
+
+        <Preference
+            android:key="clock_styles_settings"
+            android:title="@string/ls_clock_title"
+            android:summary="@string/ls_clock_summary"
+            android:fragment="com.matrixx.settings.fragments.lockscreen.ClockStyles" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="lockscreen_interface_category"
         android:title="@string/lockscreen_interface_category">
 
