@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2023 The LeafOS Project
+ * Copyright (C) 2022-2026 Project Matrixx
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.matrixx.settings.fragments.sound;
 
 import android.content.ContentResolver;
@@ -37,11 +36,24 @@ public class Sound extends SettingsPreferenceFragment
 
     public static final String TAG = "Sound";
 
+    private static final String KEY_VIBRATE_CATEGORY = "incall_vib_options";
+    private static final String KEY_VIBRATE_CONNECT = "vibrate_on_connect";
+    private static final String KEY_VIBRATE_CALLWAITING = "vibrate_on_callwaiting";
+    private static final String KEY_VIBRATE_DISCONNECT = "vibrate_on_disconnect"
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.matrixx_settings_sound);
+
+        boolean voiceCapable = TelephonyUtils.isVoiceCapable(context);
+        boolean hapticAvailable = DeviceUtils.hasVibrator(context);
+
+        if (!voiceCapable || !hapticAvailable) {
+            final PreferenceCategory vibCategory = prefScreen.findPreference(KEY_VIBRATE_CATEGORY);
+            prefScreen.removePreference(vibCategory);
+        }
     }
 
     @Override
