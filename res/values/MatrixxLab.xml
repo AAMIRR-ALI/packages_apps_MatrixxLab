@@ -37,8 +37,8 @@
     <string name="statusbar_options_title">Status Bar</string>
     <string name="statusbar_options_summary">Status Bar summery</string>
 
-    <string name="notificaton_options_title">Notifications</string>
-    <string name="notificaton_options_summary">Notifications Summery</string>
+    <string name="notifications_options_title">Notifications</string>
+    <string name="notifications_options_summary">Notifications Summery</string>
 
     <string name="about_options_title">About</string>
     <string name="about_options_summary">Know our team</string>
