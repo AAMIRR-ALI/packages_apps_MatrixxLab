@@ -28,7 +28,7 @@
     <string name="ui_options_summery">User interface summery</string>
 
     <string name="sound_options_title">Sound</string>
-    <string name="sound_options_title">Sound summery</string>
+    <string name="sound_options_title_summary">Sound summery</string>
 
 
     <string name="misc_options_title">Misc</string>
