@@ -55,7 +55,7 @@
                     android:id="@+id/system_themes_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/themes_title"
+                    android:text="@string/statusbar_options_title"
                     android:layout_below="@+id/system_themes_divider"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="6dp"
@@ -66,7 +66,7 @@
                     android:id="@+id/system_themes_summary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/themes_summary"
+                    android:text="@string/statusbar_options_summary"
                     android:layout_below="@+id/system_themes_title"
                     android:layout_marginTop="2dp"
                     android:layout_marginStart="20dp"
@@ -104,7 +104,7 @@
                 <TextView
                     android:textSize="18sp"
                     android:textColor="@color/mtx_text_color_primary"
-                    android:id="@+id/toolbox_title"
+                    android:id="@+id/qs_panel_options_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/toolbox_title"
@@ -119,7 +119,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/toolbox_summary"
+                    android:text="@string/qs_panel_options_summery"
                     android:layout_below="@+id/toolbox_title"
                     android:layout_marginStart="20dp"
                     style="@style/mtx_text_style_h6" />
@@ -226,7 +226,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="30dp"
-                android:text="@string/theme_customization_lock_clock_title"
+                android:text="@string/lockscreen_options_title"
                 android:textSize="18sp"
                 android:textColor="@color/mtx_text_color_primary"
                 style="@style/mtx_text_style_h6" />
@@ -239,7 +239,7 @@
                 android:layout_toStartOf="@id/clock_face_icon"
                 android:layout_marginEnd="16dp"
                 android:layout_marginTop="5dp"
-                android:text="@string/theme_customization_lock_clock_summary"
+                android:text="@string/lockscreen_options_title_summary"
                 android:textSize="13sp"
                 android:textColor="@color/mtx_text_color_secondary"
                 style="@style/mtx_text_style_h6" />
@@ -312,7 +312,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="30dp"
-                android:text="@string/spoofing_options_title"
+                android:text="@string/misc_options_title"
                 android:textSize="18sp"
                 android:textColor="@color/mtx_text_color_primary"
                 style="@style/mtx_text_style_h6" />
@@ -325,7 +325,7 @@
                 android:layout_toStartOf="@id/spoof_icon"
                 android:layout_marginEnd="16dp"
                 android:layout_marginTop="5dp"
-                android:text="Spoof and pixelprops releted stuff"
+                android:text="@string/misc_options_summary"
                 android:textSize="13sp"
                 android:textColor="@color/mtx_text_color_secondary"
                 style="@style/mtx_text_style_h6" />
@@ -394,7 +394,7 @@
             android:layout_centerVertical="true"
             android:textSize="18sp"
             android:textColor="@color/mtx_text_color_primary"
-            android:text="@string/bottom_options_title"
+            android:text="@string/sound_options_title"
             style="@style/mtx_text_style_h6" />
 
         <TextView
@@ -406,7 +406,7 @@
             android:layout_marginTop="4dp"
             android:textSize="11.5sp"
             android:textColor="@color/mtx_text_color_secondary"
-            android:text="Bottom releted stuff"
+            android:text="@string/sound_options_title"
             style="@style/mtx_text_style_h6" />
     </RelativeLayout>
 
@@ -444,7 +444,7 @@
             android:layout_centerVertical="true"
             android:textSize="18sp"
             android:textColor="@color/mtx_text_color_primary"
-            android:text="@string/statusbar_options_title"
+            android:text="@string/notificaton_options_title"
             style="@style/mtx_text_style_h6" />
 
         <TextView
@@ -456,7 +456,7 @@
             android:layout_marginTop="4dp"
             android:textSize="11.5sp"
             android:textColor="@color/mtx_text_color_secondary"
-            android:text="Statusbar changes"
+            android:text="@string/notificaton_options_summary"
             style="@style/mtx_text_style_h6" />
     </RelativeLayout>
 </LinearLayout>
@@ -466,6 +466,10 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:orientation="horizontal">
+
+    <!-- 🔵 Parent background -->
+    android:background="@drawable/parent_background">
+
     <RelativeLayout
         android:id="@+id/bottom_options"
         android:layout_width="0dp"
@@ -550,7 +554,7 @@
             android:layout_centerVertical="true"
             android:textSize="18sp"
             android:textColor="@color/mtx_text_color_primary"
-            android:text="@string/statusbar_options_title"
+            android:text="@string/about_options_title"
             style="@style/mtx_text_style_h6" />
 
         <TextView
@@ -562,56 +566,7 @@
             android:layout_marginTop="4dp"
             android:textSize="11.5sp"
             android:textColor="@color/mtx_text_color_secondary"
-            android:text="Statusbar changes"
-            style="@style/mtx_text_style_h6" />
-    </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/new_button"
-        android:layout_width="0dp"
-        android:layout_height="85dp"
-        android:layout_weight="1"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/custom_preference_background"
-        android:clickable="true"
-        android:clipChildren="true"
-        android:clipToPadding="true"
-        android:clipToOutline="true">
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/statusbar_animation"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:scaleType="centerCrop"
-            android:alpha="0.5"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/neuro" />
-
-        <TextView
-            android:id="@+id/statusbar_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="4dp"
-            android:layout_centerVertical="true"
-            android:textSize="18sp"
-            android:textColor="@color/mtx_text_color_primary"
-            android:text="@string/statusbar_options_title"
-            style="@style/mtx_text_style_h6" />
-
-        <TextView
-            android:id="@+id/statusbar_summary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/statusbar_title"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="4dp"
-            android:textSize="11.5sp"
-            android:textColor="@color/mtx_text_color_secondary"
-            android:text="Statusbar changes"
+            android:text="@string/about_options_title"
             style="@style/mtx_text_style_h6" />
     </RelativeLayout>
 </LinearLayout>

@@ -26,9 +26,9 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 @SearchIndexable
-public class System extends DashboardFragment {
+public class Bottoms extends DashboardFragment {
 
-    private static final String TAG = "System";
+    private static final String TAG = "About";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,9 +49,9 @@ public class System extends DashboardFragment {
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.system_settings;
+        return R.xml.about_options_title;
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.system_settings);
+            new BaseSearchIndexProvider(R.xml.about_options_title);
 }

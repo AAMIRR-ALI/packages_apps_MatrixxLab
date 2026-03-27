@@ -17,21 +17,34 @@
 
 <!-- Havoc lab -->
     <string name="havoc_lab_title">MatrixX Lab</string>
-    <string name="havoc_lab_footer">Some Matrixify things</string>
     <string name="havoc_lab_summary">Just some Extra features</string>
+<!-- Qs title -->
     <string name="qs_panel_options_title">Quick Settings</string>
+    <string name="qs_panel_options_summery">Quick Settings</string>
+
     <string name="bottom_options_title">Buttons</string>
-    <string name="ui_options_title">Themes</string>
-    <string name="system_options_title">System</string>
-    <string name="spoofing_options_title">Spoofing</string>
+
+    <string name="ui_options_title">User interface</string>
+    <string name="ui_options_summery">User interface summery</string>
+
+    <string name="sound_options_title">Sound</string>
+    <string name="sound_options_title">Sound summery</string>
+
+
+    <string name="misc_options_title">Misc</string>
+    <string name="misc_options_summary">Spoof and pixelprops releted stuff</string>
+
     <string name="statusbar_options_title">Status Bar</string>
-    <string name="toolbox_title">Quick Settings</string>
-    <string name="toolbox_summary">Quick Settings features</string>
-    <string name="themes_title">System</string>
-    <string name="themes_summary">Your device, your changes</string>
+    <string name="statusbar_options_summary">Status Bar summery</string>
+
+    <string name="notificaton_options_title">Notifications</string>
+    <string name="notificaton_options_summary">Notifications Summery</string>
+
+    <string name="about_options_title">About</string>
+    <string name="about_options_summary">Know our team</string>
     <!-- Lockscreen font -->
-    <string name="theme_customization_lock_clock_title">Lockscreen</string>
-    <string name="theme_customization_lock_clock_summary">Modify lockscreen clock style and font</string>
+    <string name="lockscreen_options_title">Lockscreen</string>
+    <string name="lockscreen_options_title_summary">Modify lockscreen clock style and font</string>
 
 
 </resources>

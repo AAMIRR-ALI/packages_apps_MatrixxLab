@@ -26,9 +26,9 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 @SearchIndexable
-public class Spoofing extends DashboardFragment {
+public class System extends DashboardFragment {
 
-    private static final String TAG = "Spoofing";
+    private static final String TAG = "Sound";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,9 +49,9 @@ public class Spoofing extends DashboardFragment {
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.spoofing_settings;
+        return R.xml.sound_settings;
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.spoofing_settings);
+            new BaseSearchIndexProvider(R.xml.sound_settings);
 }
