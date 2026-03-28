@@ -71,7 +71,7 @@ public class MatrixxLabSettings extends DashboardFragment {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.MATRIXX_SETTINGS;
+        return MetricsProto.MetricsEvent.MATRIXX;
     }
 
     @Override
