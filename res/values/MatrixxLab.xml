@@ -22,8 +22,8 @@
     <string name="qs_panel_options_title">Quick Settings</string>
     <string name="qs_panel_options_summary">Quick Settings</string>
 
-    <string name="botton_options_title">Buttons</string>
-    <string name="botton_options_summary">Buttons</string>
+    <string name="button_options_title">Buttons</string>
+    <string name="button_options_summary">Buttons</string>
 
 
     <string name="ui_options_title">User interface</string>
