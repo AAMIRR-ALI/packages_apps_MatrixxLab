@@ -26,7 +26,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 @SearchIndexable
-public class Spoofing extends DashboardFragment {
+public class Misc extends DashboardFragment {
 
     private static final String TAG = "Misc";
 

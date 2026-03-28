@@ -26,7 +26,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 @SearchIndexable
-public class Bottoms extends DashboardFragment {
+public class About extends DashboardFragment {
 
     private static final String TAG = "About";
 

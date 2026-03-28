@@ -26,7 +26,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 @SearchIndexable
-public class System extends DashboardFragment {
+public class Notifications extends DashboardFragment {
 
     private static final String TAG = "Notifications";
 

@@ -26,9 +26,9 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 @SearchIndexable
-public class Settings extends DashboardFragment {
+public class LockScreen extends DashboardFragment {
 
-    private static final String TAG = "Lockscreen";
+    private static final String TAG = "LockScreen";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
