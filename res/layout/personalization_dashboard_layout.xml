@@ -140,7 +140,7 @@
             app:cardCornerRadius="28dp"
             app:cardElevation="0dp">
 
-            <com.android.settings.ui.AnimateWallpaperView
+            <com.havoc.settings.laboratory.ui.AnimateWallpaperView
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -255,7 +255,7 @@
                     android:clipToOutline="true"
                     app:cardCornerRadius="5dp"
                     app:cardElevation="0dp">
-                    <com.android.settings.ui.WallpaperView
+                    <com.havoc.settings.laboratory.ui.WallpaperView
                         android:gravity="center"
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
@@ -491,7 +491,7 @@
             android:alpha="0.5"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/button" />
+            app:lottie_rawRes="@raw/button2" />
 
         <TextView
             android:id="@+id/button_options_title"

@@ -46,7 +46,7 @@ import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.LayoutPreference;
 
-import com.android.settings.ui.personalizationSettingsController;
+import com.havoc.settings.laboratory.ui.personalizationSettingsController;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settingslib.search.Indexable;
 
