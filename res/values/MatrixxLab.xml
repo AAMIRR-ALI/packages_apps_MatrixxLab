@@ -20,12 +20,14 @@
     <string name="havoc_lab_summary">Just some Extra features</string>
 <!-- Qs title -->
     <string name="qs_panel_options_title">Quick Settings</string>
-    <string name="qs_panel_options_summery">Quick Settings</string>
+    <string name="qs_panel_options_summary">Quick Settings</string>
 
-    <string name="bottom_options_title">Buttons</string>
+    <string name="botton_options_title">Buttons</string>
+    <string name="botton_options_summary">Buttons</string>
+
 
     <string name="ui_options_title">User interface</string>
-    <string name="ui_options_summery">User interface summery</string>
+    <string name="ui_options_summary">User interface summery</string>
 
     <string name="sound_options_title">Sound</string>
     <string name="sound_options_title_summary">Sound summery</string>
