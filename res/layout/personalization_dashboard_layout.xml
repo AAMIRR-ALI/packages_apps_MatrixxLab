@@ -491,7 +491,7 @@
             android:alpha="0.5"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/button2" />
+            app:lottie_rawRes="@raw/button3" />
 
         <TextView
             android:id="@+id/button_options_title"
