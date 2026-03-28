@@ -14,7 +14,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tenx="http://schemas.android.com/apk/res-auto"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:key="bottom_options"
-    android:title="@string/botton_options_title">
+    android:key="button_options"
+    android:title="@string/button_options_title">
     
 </PreferenceScreen>

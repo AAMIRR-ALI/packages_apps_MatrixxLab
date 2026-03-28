@@ -26,9 +26,9 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 @SearchIndexable
-public class Bottons extends DashboardFragment {
+public class Buttons extends DashboardFragment {
 
-    private static final String TAG = "Bottons";
+    private static final String TAG = "Buttons";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,9 +49,9 @@ public class Bottons extends DashboardFragment {
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.botton_settings;
+        return R.xml.button_settings;
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.botton_settings);
+            new BaseSearchIndexProvider(R.xml.button_settings);
 }

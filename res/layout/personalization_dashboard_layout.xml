@@ -469,7 +469,7 @@
 
 
     <RelativeLayout
-        android:id="@+id/botton_options"
+        android:id="@+id/button_options"
         android:layout_width="0dp"
         android:layout_height="85dp"
         android:layout_weight="1"
@@ -483,7 +483,7 @@
         android:clipToOutline="true">
 
         <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/botton_options_animation"
+            android:id="@+id/button_options_animation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -494,7 +494,7 @@
             app:lottie_rawRes="@raw/neuro" />
 
         <TextView
-            android:id="@+id/botton_options_title"
+            android:id="@+id/button_options_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -502,14 +502,14 @@
             android:layout_centerVertical="true"
             android:textSize="18sp"
             android:textColor="@color/mtx_text_color_primary"
-            android:text="@string/bottom_options_title"
+            android:text="@string/button_options_title"
             style="@style/mtx_text_style_h6" />
 
         <TextView
-            android:id="@+id/botton_options_summary"
+            android:id="@+id/button_options_summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/bottom_options_title"
+            android:layout_below="@id/button_options_title"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="4dp"
             android:textSize="11.5sp"
