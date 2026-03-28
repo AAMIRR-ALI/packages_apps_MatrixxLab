@@ -433,7 +433,7 @@
             android:alpha="0.5"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/neuro" />
+            app:lottie_rawRes="@raw/loop" />
 
         <TextView
             android:id="@+id/statusbar_title"
@@ -491,7 +491,7 @@
             android:alpha="0.5"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/neuro" />
+            app:lottie_rawRes="@raw/button" />
 
         <TextView
             android:id="@+id/button_options_title"
@@ -541,7 +541,7 @@
             android:alpha="0.5"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/neiro" />
+            app:lottie_rawRes="@raw/ai" />
 
         <TextView
             android:id="@+id/about_title"

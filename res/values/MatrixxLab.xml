@@ -16,7 +16,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
 <!-- Havoc lab -->
-    <string name="havoc_lab_title">MatrixX Lab</string>
+    <string name="havoc_lab_title">Matrixx Lab</string>
     <string name="havoc_lab_summary">Just some Extra features</string>
 <!-- Qs title -->
     <string name="qs_panel_options_title">Quick Settings</string>
