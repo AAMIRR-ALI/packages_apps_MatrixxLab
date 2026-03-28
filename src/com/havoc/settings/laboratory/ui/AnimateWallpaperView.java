@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.ui;
+package com.havoc.settings.laboratory.ui
 
 import android.app.WallpaperManager;
 import android.content.Context;
