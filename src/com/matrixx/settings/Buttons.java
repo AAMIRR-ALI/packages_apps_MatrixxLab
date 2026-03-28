@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.havoc.settings.laboratory;
+package com.matrixx.settings;
 
 import android.os.Bundle;
 import androidx.preference.Preference;

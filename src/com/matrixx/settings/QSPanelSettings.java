@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.havoc.settings.laboratory;
+package com.matrixx.settings;
 
 import android.os.Bundle;
 import androidx.preference.Preference;
@@ -26,9 +26,9 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 @SearchIndexable
-public class Notifications extends DashboardFragment {
+public class QSPanelSettings extends DashboardFragment {
 
-    private static final String TAG = "Notifications";
+    private static final String TAG = "QSPanelSettings";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,9 +49,9 @@ public class Notifications extends DashboardFragment {
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.notifications_settings;
+        return R.xml.qs_panel_settings;
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.notifications_settings);
+            new BaseSearchIndexProvider(R.xml.qs_panel_settings);
 }

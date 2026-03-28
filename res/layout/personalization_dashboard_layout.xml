@@ -140,7 +140,7 @@
             app:cardCornerRadius="28dp"
             app:cardElevation="0dp">
 
-            <com.havoc.settings.laboratory.ui.AnimateWallpaperView
+            <com.matrixx.settings.ui.AnimateWallpaperView
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -255,7 +255,7 @@
                     android:clipToOutline="true"
                     app:cardCornerRadius="5dp"
                     app:cardElevation="0dp">
-                    <com.havoc.settings.laboratory.ui.WallpaperView
+                    <com.matrixx.settings.ui.WallpaperView
                         android:gravity="center"
                         android:orientation="horizontal"
                         android:layout_width="match_parent"

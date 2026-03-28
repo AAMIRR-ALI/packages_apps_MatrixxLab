@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.havoc.settings.laboratory;
+package com.matrixx.settings;
 
 import android.os.Bundle;
 import androidx.preference.Preference;
@@ -26,9 +26,9 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 @SearchIndexable
-public class About extends DashboardFragment {
+public class Misc extends DashboardFragment {
 
-    private static final String TAG = "About";
+    private static final String TAG = "Misc";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,9 +49,9 @@ public class About extends DashboardFragment {
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.about_options_title;
+        return R.xml.misc_settings;
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.about_options_title);
+            new BaseSearchIndexProvider(R.xml.misc_settings);
 }

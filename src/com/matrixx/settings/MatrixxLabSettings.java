@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.havoc.settings.laboratory;
+package com.matrixx.settings;
 
 import android.app.Activity;
 import android.app.settings.SettingsEnums;
@@ -60,18 +60,18 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class LabSettings extends DashboardFragment {
+public class MatrixxLabSettings extends DashboardFragment {
 
-        private static final String LOG_TAG = "LabSettings";
+        private static final String LOG_TAG = "MatrixxLabSettings";
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.havoc_lab_settings;
+        return R.xml.matrixx_lab_settings;
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.HAVOC_SETTINGS;
+        return MetricsProto.MetricsEvent.MATRIXX_SETTINGS;
     }
 
     @Override
@@ -105,7 +105,7 @@ public class LabSettings extends DashboardFragment {
      * For Search.
      */
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.havoc_lab_settings) {
+            new BaseSearchIndexProvider(R.xml.matrixx_lab_settings) {
                 @Override
                 public List<AbstractPreferenceController> createPreferenceControllers(
                         Context context) {

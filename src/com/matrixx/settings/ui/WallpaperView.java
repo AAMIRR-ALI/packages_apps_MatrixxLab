@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.havoc.settings.laboratory.ui;
+package com.matrixx.settings.ui;
 
 import android.app.WallpaperManager;
 import android.content.Context;
