@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2023-2026 Project Matrixx
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Matrixx lab -->
+    <string name="matrixx_lab_title">Matrixx Lab</string>
+    <string name="matrixx_lab_summary">Redefining the Fabric of Customization</string>
+    <string name="qs_panel_options_title">Quick Settings</string>
+    <string name="qs_panel_options_summary">Quick settings style, and customization</string>
+    <string name="button_options_title">Buttons</string>
+    <string name="button_options_summary">Powermenu, and other botton settings</string>
+    <string name="ui_options_title">User Interface</string>
+    <string name="ui_options_summary">Various User interface customization</string>
+    <string name="sound_options_title">Sound</string>
+    <string name="sound_options_title_summary">Sound settings, Pulse and other volume customization</string>
+    <string name="misc_options_title">Misc</string>
+    <string name="misc_options_summary">Spoofing, Gaming mode &amp; System settings </string>
+    <string name="statusbar_options_title">Status Bar</string>
+    <string name="statusbar_options_summary">Status Bar summery</string>
+    <string name="notifications_options_title">Notifications</string>
+    <string name="notifications_options_summary">Heads up &amp; Other customizations...</string>
+    <string name="about_options_title">About</string>
+    <string name="about_options_summary">Know about this project</string>
+    <string name="lockscreen_options_title">Lockscreen</string>
+    <string name="lockscreen_options_title_summary">Customize lockscreen clock and many more...</string>
+
+    <!-- About Matrixx -->
+    <string name="about_matrixx">About Matrixx</string>
+    <string name="team_matrixx">Team Matrixx</string>
+    <string name="team_matrixx_desc">Hey! We are Team Matrixx</string>
+    <string name="devices_summary">Official devices list</string>
+    <string name="matrixx_devices_title">Official Devices</string>
+    <string name="get_changelogs_title">Latest changelog</string>
+    <string name="get_changelogs_summary">Check latest changes</string>
+    <string name="about_device_name">Device</string>
+    <string name="matrixx_source_title">GitHub</string>
+    <string name="matrixx_source_summary">We love open source, check us out</string>
+    <string name="matrixx_telegram_title">Matrixx community</string>
+    <string name="matrixx_telegram_summary">We are on telegram. Join us!</string>
+    <string name="matrixx_update_title">Updates</string>
+    <string name="matrixx_update_summary">Check and download latest update</string>
+    <string name="matrixx_legal">Matrixx legal</string>
+    <string name="matrixx_legal_desc">Legal terms of use</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on color below to apply</string>
+    <string name="arrow_right" translatable="false">→</string>
+    <string name="arrow_down" translatable="false">↓</string>
+    <string name="hex" translatable="false">Hex:</string>
+    <string name="hex_hint" translatable="false">#ff000000</string>
+    <string name="set">Set</string>
+    <string name="color_default">Default</string>
+
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">by default</string>
+    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
+    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+
+    <!-- General strings -->
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="discard_changes">Discard changes</string>
+    <string name="never">Never</string>
+    <string name="always">Always</string>
+    <string name="caution">Caution</string>
+    <string name="delete">Delete</string>
+    <string name="delete_message">Remove selected item?</string>
+    <string name="choose_app">Choose app</string>
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+    <string name="accent_color">Accent color (Default)</string>
+    <string name="notification_color">Notification color</string>
+    <string name="wallpaper_color">Wallpaper color</string>
+    <string name="rainbow_color">Rainbow color</string>
+    <string name="custom_color">Custom color</string>
+    <string name="restart_systemui">Restart SystemUI for change to take effect!</string>
+    <string name="default_value">Default</string>
+    <string name="search_apps">Search apps</string>
+
+    <!-- Units -->
+    <string name="unit_hz">hz</string>
+    <string name="unit_milliseconds">milliseconds</string>
+    <string name="unit_pixels" translatable="false">dp</string>
+    <string name="unit_seconds">seconds</string>
+
+    <!-- Keybox Data -->
+    <string name="keybox_data_title">Keybox attestation override</string>
+    <string name="keybox_data_summary">Load a custom keybox XML to override device key attestation</string>
+    <string name="keybox_data_loaded_summary">Custom keybox XML loaded. Delete to clear.</string>
+    <string name="keybox_delete_content_description">Clear keybox data</string>
+    <string name="keybox_toast_invalid_file_selected">Not an XML file. Choose a valid keybox XML.</string>
+    <string name="keybox_toast_missing_data">Invalid keybox XML: required fields missing</string>
+    <string name="keybox_toast_file_loaded">Keybox loaded</string>
+    <string name="keybox_toast_file_cleared">Keybox cleared</string>
+
+</resources>
