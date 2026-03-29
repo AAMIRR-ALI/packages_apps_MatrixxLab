@@ -95,7 +95,7 @@ public class MatrixxLabSettings extends DashboardFragment {
     }
     
     private static List<AbstractPreferenceController> buildPreferenceControllers(
-            Context context, LabSettings fragment, Lifecycle lifecycle) {
+            Context context, MatrixxLabSettings fragment, Lifecycle lifecycle) {
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
         controllers.add(new personalizationSettingsController(context));
         return controllers;
