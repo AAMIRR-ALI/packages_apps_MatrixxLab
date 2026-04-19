@@ -383,7 +383,7 @@
             android:alpha="0.5"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/neuro" />
+            app:lottie_rawRes="@raw/sound" />
 
         <TextView
             android:id="@+id/bottom_options_title"
